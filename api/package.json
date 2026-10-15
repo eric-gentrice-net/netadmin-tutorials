@@ -1,0 +1,17 @@
+{
+  "name": "netadmin-tutorials-api",
+  "version": "0.1.0",
+  "private": true,
+  "description": "網管小學堂 班級 API（Cloudflare Worker + KV）",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "test": "node test/api.test.mjs",
+    "deploy": "wrangler deploy",
+    "kv:create": "wrangler kv namespace create DB",
+    "secret": "wrangler secret put TEACHER_SECRET"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}

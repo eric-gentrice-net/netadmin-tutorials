@@ -1,0 +1,18 @@
+# Cloudflare Worker 設定：同一個 Worker 同時提供靜態網頁（../web）與 /api/*
+name = "netadmin-tutorials"
+main = "src/index.js"
+compatibility_date = "2025-09-01"
+
+# 靜態網頁：找不到檔案的請求才會進到 Worker（也就是 /api/*）
+[assets]
+directory = "../web"
+binding = "ASSETS"
+
+# KV 命名空間：先執行 `npx wrangler kv namespace create DB`，把回傳的 id 填進來
+[[kv_namespaces]]
+binding = "DB"
+id = "REPLACE_WITH_KV_NAMESPACE_ID"
+
+# 講師密碼請用 secret 設定，不要寫在這裡：
+#   npx wrangler secret put TEACHER_SECRET
+# 本機開發則放在 api/.dev.vars（已列入 .gitignore），格式見 .dev.vars.example

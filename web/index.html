@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@700&family=Noto+Sans+TC:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<title>網管小學堂：接線大作戰</title>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>網管小學堂：接線大作戰</h1>
+    <span class="lvl" id="lvl"></span>
+  </header>
+  <div class="who" id="who" aria-live="polite" hidden></div>
+  <div id="teach" hidden></div>
+  <div class="osi" id="osi" aria-label="這一關練習的 OSI 層"></div>
+  <div class="tools" id="tools"></div>
+  <p class="toolnote" id="toolnote" hidden></p>
+  <div class="viewbar" id="viewbar" aria-live="polite" hidden></div>
+
+  <div class="play">
+    <div class="main">
+      <div class="stage">
+        <svg id="board" role="application" aria-label="配線畫面：拖曳設備，從連接埠拉出網路線"></svg>
+        <div class="status" id="status" aria-live="polite"></div>
+        <div class="acts" id="acts" hidden></div>
+      </div>
+
+      <div class="box win" id="win" hidden>
+        <div class="win-head">
+          <div><div class="stars" id="stars" aria-label="星數"></div><div class="sgrid" id="sgrid"></div></div>
+          <div class="btns"><button class="go" id="next"></button></div>
+        </div>
+        <p class="lead" id="dispfrom" hidden></p>
+        <div id="close" hidden></div>
+        <h2>這一關學到的事</h2>
+        <ul id="learn"></ul>
+        <p class="tip" id="tip"></p>
+        <div id="see" hidden></div>
+        <div id="home" hidden></div>
+      </div>
+    </div>
+
+    <div class="side">
+      <div class="box">
+        <h2 id="task"></h2>
+        <p id="intro"></p>
+        <ul class="goal" id="goals"></ul>
+        <div class="inv" id="inv" aria-label="剩餘網路線"></div>
+        <div class="kinds" id="kinds" hidden></div>
+      </div>
+
+      <div class="btns">
+        <button class="go" id="test">測試連線</button>
+        <button id="hintBtn">提示</button>
+        <button id="reset">重來</button>
+      </div>
+      <p class="hint" id="hint" hidden></p>
+
+      <div class="term" id="term" aria-live="polite"></div>
+      <form class="sh" id="sh" hidden><span id="shhost"></span><input id="shin" list="shlist" maxlength="80" autocomplete="off" spellcheck="false" autocapitalize="off" aria-label="輸入指令" placeholder="輸入指令，例如 ipconfig"><button>執行</button></form>
+      <datalist id="shlist"></datalist>
+      <label class="shonly" id="shonlyl" hidden><input type="checkbox" id="shonly"> 挑戰：選單不列出指令，自己在終端機輸入</label>
+
+      <details class="box log" id="log"><summary>操作紀錄<span id="logn"></span></summary>
+        <ol id="steps"></ol>
+        <div class="btns"><button id="share">複製分享連結</button><button id="lastwin" hidden>看上次過關的紀錄</button></div>
+        <input id="shareurl" readonly hidden aria-label="分享連結">
+        <p class="fb" id="sharemsg" aria-live="polite"></p>
+      </details>
+
+    </div>
+  </div>
+
+  <h2 class="road-h">闖關路線</h2>
+  <p class="progrow"><span id="prog"></span><button id="wipe">清除紀錄</button></p>
+  <p class="progrow"><button id="disp">隨機派工：抽一張報修單</button><span>從七張報修單隨機抽一張，不說是哪一章，就像電話打來的時候一樣。<span id="dispn"></span></span></p>
+  <div id="road"></div>
+
+  <h2 class="road-h">知識卡</h2>
+  <p class="progrow">遊戲裡沒有做成關卡的觀念。點開來讀，再答一題。</p>
+  <div class="cards" id="cards"></div>
+  <p class="progrow" style="margin-top:28px;opacity:.7">© 2026 辛文義（米立方智慧科技）。教材內容以 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-Hant" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> 授權，程式以 MIT 授權。</p>
+</div>
+<div id="printcard"></div>
+
+<script src="js/app.js"></script>
+</body>
+</html>

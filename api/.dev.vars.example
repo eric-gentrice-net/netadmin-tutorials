@@ -1,0 +1,2 @@
+# 複製成 .dev.vars 供 `npm run dev` 使用（.dev.vars 不會進版控）
+TEACHER_SECRET=change-me

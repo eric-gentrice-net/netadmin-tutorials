@@ -1,0 +1,39 @@
+This repository contains two kinds of material under two licenses.
+
+================================================================================
+1. Program code (HTML / CSS / JavaScript, the Worker API, build and config
+   files) — MIT License
+================================================================================
+
+Copyright (c) 2026 辛文義（米立方智慧科技）— original author of
+「網管小學堂：接線大作戰」(https://netadmin-school.milifun.net/)
+Copyright (c) 2026 Eric (eric-gentrice-net) — modifications in this repository
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+================================================================================
+2. Teaching content (level texts, knowledge cards, scenario descriptions,
+   hints, in-game copy) — CC BY-NC-SA 4.0
+================================================================================
+
+教材內容 © 2026 辛文義（米立方智慧科技），以
+Creative Commons 姓名標示－非商業性－相同方式分享 4.0 國際 授權條款釋出。
+https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-Hant
+
+依該條款，改作後的教材內容必須：標示原作者、不得用於商業目的、以相同授權條款釋出。
